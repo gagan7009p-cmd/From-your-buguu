@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For My Molle ❤️</title>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Patrick+Hand&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+<style>
+    /* Pinteresty Background Vibe */
+    body {
+        background: linear-gradient(120deg, #ffdde1 0%, #ee9ca7 100%);
+        background-size: 400% 400%;
+        animation: gradientBG 15s ease infinite;
+        font-family: 'Quicksand', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        padding: 20px;
+        overflow-x: hidden;
+    }
+
+    @keyframes gradientBG {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    /* Floating Background Elements */
+    .floating-deco {
+        position: absolute;
+        opacity: 0.5;
+        animation: floatUp 10s linear infinite;
+        z-index: -1;
+    }
+    @keyframes floatUp {
+        0% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+        20% { opacity: 0.7; }
+        100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+    }
+
+    /* Common Card Style */
+    .card-style {
+        background: rgba(255, 255, 255, 0.95);
+        width: 100%;
+        max-width: 450px;
+        border-radius: 35px;
+        padding: 30px 25px;
+        text-align: center;
+        box-shadow: 0 15px 45px rgba(255, 94, 141, 0.4);
+        border: 3px dashed #ff8fa3;
+        position: relative;
+        overflow: hidden;
+    }
+
+    /* Login Screen Specifics */
+    #login-screen {
+        display: block; /* Visible initially */
+        z-index: 100;
+    }
+
+    #main-content {
+        display: none; /* Hidden initially */
+    }
+
+    input[type="text"] {
+        padding: 15px;
+        border-radius: 50px;
+        border: 2px solid #ff8fa3;
+        width: 70%;
+        outline: none;
+        font-family: 'Quicksand', sans-serif;
+        text-align: center;
+        font-size: 1.1rem;
+        margin-top: 20px;
+        background: #fff0f5;
+        color: #d63384;
+    }
+    
+    input[type="text"]::placeholder {
+        color: #ffb3c1;
+    }
+
+    /* Cute Corner Decorations */
+    .corner-deco {
+        position: absolute;
+        font-size: 2rem;
+    }
+    .top-left { top: 10px; left: 15px; transform: rotate(-20deg); }
+    .top-right { top: 10px; right: 15px; transform: rotate(20deg); }
+
+    /* Header Font */
+    h1 {
+        font-family: 'Dancing Script', cursive;
+        color: #d63384;
+        font-size: 2.8rem;
+        margin-bottom: 15px;
+        text-shadow: 2px 2px 4px rgba(255, 182, 193, 0.5);
+    }
+
+    /* Cartoon GIFs */
+    .cute-gif {
+        width: 80%;
+        max-width: 220px;
+        border-radius: 20px;
+        border: 3px solid #fff0f5;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        margin: 10px auto;
+        display: block;
+    }
+
+    /* Main Message Text styling */
+    .message-body {
+        font-family: 'Patrick Hand', cursive; /* Handwritten vibe */
+        color: #5a4a55;
+        font-size: 1.25rem;
+        line-height: 1.5;
+        margin: 20px 0;
+        text-align: left;
+        background: #fff6f9;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .highlight {
+        color: #ff4d6d;
+        font-weight: bold;
+        background-color: #ffe4e9;
+        padding: 2px 5px;
+        border-radius: 8px;
+    }
+
+    /* Buttons */
+    .btn {
+        background: linear-gradient(45deg, #ff4d6d, #ff8fa3);
+        color: white;
+        padding: 12px 30px;
+        border: none;
+        border-radius: 50px;
+        font-family: 'Quicksand', sans-serif;
+        font-size: 1.1rem;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 8px 20px rgba(255, 77, 109, 0.4);
+        transition: transform 0.3s, box-shadow 0.3s;
+        margin-top: 15px;
+    }
+    .btn:hover {
+        transform: translateY(-3px) scale(1.05);
+        box-shadow: 0 12px 25px rgba(255, 77, 109, 0.6);
+    }
+
+    .error-msg {
+        color: #ff0000;
+        font-size: 0.9rem;
+        margin-top: 10px;
+        display: none;
+        font-weight: bold;
+    }
+
+</style>
+</head>
+<body>
+
+<div class="floating-deco" style="left: 10%; font-size: 2rem; animation-duration: 12s;">🌸</div>
+<div class="floating-deco" style="left: 30%; font-size: 3rem; animation-duration: 9s;">💖</div>
+<div class="floating-deco" style="left: 50%; font-size: 2rem; animation-duration: 14s;">✨</div>
+<div class="floating-deco" style="left: 70%; font-size: 2.5rem; animation-duration: 11s;">💌</div>
+<div class="floating-deco" style="left: 85%; font-size: 3rem; animation-duration: 10s;">🧸</div>
+
+<div id="login-screen" class="card-style">
+    <h1>Password Please? 🔐</h1>
+    <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExMDV4eG80eGZ6eGZ6eGZ6eGZ6eGZ6eGZ6eGZ6eGZ6eGZ6eCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/iCVzZwwE6QNBz3ZFh8/giphy.gif" class="cute-gif" style="max-width: 150px;">
+    
+    <p style="margin-top: 20px; color: #555;">Apna cute sa nickname type kro (Hint: m___e) 😉</p>
+    
+    <input type="text" id="passwordInput" placeholder="Enter password here...">
+    <div id="errorMessage" class="error-msg">Galat Password! 🥺 Only my Kakku knows it!</div>
+    <br>
+    <button class="btn" onclick="checkPassword()">Unlock My Heart ❤️</button>
+</div>
+
+<div id="main-content" class="card-style">
+    <div class="corner-deco top-left">✨</div>
+    <div class="corner-deco top-right">💖</div>
+
+    <h1>Suno mere pyare laddo ❤️</h1>
+
+    <img src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExbnY3aXFqanE2a3I4aG4wZzV6aG4wZzV6aG4wZzV6aG4wZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/Mnt00E9zIKB7CPxrww/giphy.gif" alt="Cute Couple Cartoon" class="cute-gif">
+
+    <div class="message-body">
+        <p>
+            Mannya ki sade ch kuch mood off wali gallan ya negative gallan hundia a but isda mtlb eh ni ki we don’t understand or don’t feel each other’s feelings. 🥺
+        </p>
+        <p>
+            Dekho mere bache chahe hum me kitni mood off wali baate ya negative baate ho at the end what matters is ki how much we love each other mere kake and <span class="highlight">we love each other soooooooo infinitely wala</span> 😁🫵🫀💖🧿❤️🫶😚💗✨
+        </p>
+        <p>
+            Soo myy sweetheart this is for an apology my kakku ki main negative sochleta hu faltu ch and maine wo baat boldi ki express krna ab itna matter ni krta wagera i am sorry for that mere bache but sohne hum me sab bohot matter krta hai jaan <span class="highlight">each and every small thing matters myy love thats why our relationship is bestest my sweetheart</span> 😁❤️🧿💞💗💖 and ye express wali baat chhodo mera bache sab baate chhodte hai because you know na these negative things don’t matter between us my lovee 😁❤️🧿💖🫶💞
+        </p>
+        <p>
+            Ab pehle mera kakka ispe react krega ki mere bache ko acha feel hua ? 😁❤️🧿💞💖😚💗✨ and fir mera bacha btayega ki sab clear hai na and all good hai na 😁❤️🧿💞💗💖 if mera kakka mujhse naraz hai to main mnauga mere bache ko and mood happy krege mere sohne darling 😁❤️🧿💞💗💖
+        </p>
+        <p>
+            I feel sorry for that mere bachee and i loveee youu sooooo much myy darlinggg , myy loveee , my heart, my breath <span class="highlight">meri molle</span> 🫵🫀😁❤️🧿💞✨😚💖💗
+        </p>
+        <p>
+            Bas ye apke buggu ki taraf se random chotu sa effort i mean main ise effort ni count krta because itna to main mere bachuu ke liye kr hi skta hu na ! 😁❤️🧿💞😚💖💗✨ bas ye meri taraf se mere kakke ke liye chotu sa but cuutuu sa para ya gift kuch bhi bol skte hai 😁❤️🧿💞✨💖😚
+        </p>
+    </div>
+
+    <img src="https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExaHk0aXFqanE2a3I4aG4wZzV6aG4wZzV6aG4wZzV6aG4wZzV6aG4wZyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/LmgHqqB3GXjET5c9j4/giphy.gif" alt="Cute Hug Cartoon" class="cute-gif">
+
+    <p style="font-family: 'Patrick Hand', cursive; font-size: 1.1rem; color: #d63384; margin-top: 15px;">
+        I loveeee youu forever meri molle and i always will loveee you till my last breath meri molle meri har heartbeat pe bas apka haq hai and apka naam hai jaaaan i lovee youu from the bottom of my heart meri molle 🥺😁❤️🧿💞😚💖✨
+    </p>
+
+    <button class="btn" onclick="alert('Love youuuu so much! 💖')">Smile Please Meri Molle? 🥺💖</button>
+</div>
+
+<script>
+    function checkPassword() {
+        var password = document.getElementById("passwordInput").value.toLowerCase().trim();
+        var errorMsg = document.getElementById("errorMessage");
+        var loginScreen = document.getElementById("login-screen");
+        var mainContent = document.getElementById("main-content");
+
+        // SET PASSWORD HERE (currently set to "molle")
+        if (password === "molle") {
+            loginScreen.style.display = "none";
+            mainContent.style.display = "block";
+        } else {
+            errorMsg.style.display = "block";
+            // Shake effect for wrong password
+            var inputField = document.getElementById("passwordInput");
+            inputField.style.border = "2px solid red";
+            setTimeout(function(){ 
+                inputField.style.border = "2px solid #ff8fa3";
+            }, 500);
+        }
+    }
+</script>
+
+</body>
+</html>
